@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Javascript output</title>
+    </head>
+    <body>
+        <h3>Javascript Output</h3>
+        <h5>Door het klikken op de onderstaande knop genereer je output met een alert()</h5>
+        <button onclick="alert('Dit is wat output')">Klik hier!</button>
+        <hr>
+
+        <h3 id="showText"></h3>
+    
+        <table>
+            <tr>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><button onclick="document.getElementById('showText').innerHTML =
+                                        'Voor iets in het tekstvak'">Klik op mij!</button></td>
+            </tr>
+        </table>
+        <hr>
+        <script>
+            document.write("Deze tekst is gemaakt met document.write");
+        </script>
+        <hr>
+        Druk op control-shift-i voor het zien van de console tekst.<br> 
+        <script>
+            console.log("Dit is wat console output");
+        </script>
+
+        <a href="index.html">Ga terug naar index</a>
+    </body>
+</html>

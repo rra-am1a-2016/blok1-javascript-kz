@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Array's</title>
+        </head>
+        <body>
+            <script>
+                var toetsen = ["Web-php",
+                               "RRA",
+                               "Toets1",
+                               8.3,
+                               "12-09-2016",
+                               "Toets2",
+                               9.7,
+                               "5-10-2016"];
+
+               document.write("Het vak " + toetsen[0] + " wordt door " + toetsen[1] + " gegeven<br>");
+               document.write(toetsen[4] + " heb ik voor " + toetsen[2] + " een " + toetsen[3] + " gehaald<br>"); 
+               document.write(toetsen[7] + " heb ik voor " + toetsen[5] + " een " + toetsen[6] + " gehaald<br>");
+               
+               // Met de functie push kun je array elementen toevoegen.
+               toetsen.push("Toets3");
+               toetsen.push(3.4);
+               toetsen.push("05-10-2016");
+ 
+               // Met de propertie length kun je ten alle tijden het aantal elementen van een array opvragen.
+               document.write("Het aantal array-elementen is: " + toetsen.length + "<br>");
+
+               document.write(toetsen[10] + " heb ik voor " + toetsen[8] + " een " + toetsen[9] + " gehaald<br>");
+               
+               // Met de functie toString() worden alle array elementen kommagescheiden achter elkaar weergegeven.
+               document.write(toetsen.toString() + "<br>");
+
+               // Met poppen en pushen kun je het laatste element van een array verwijderen of toevoegen.
+               alert("Het verwijderde laatste element is: " + toetsen.pop());
+               document.write(toetsen.toString() + "<br>");
+
+               toetsen.pop();
+               document.write(toetsen.toString() + "<br>");
+
+               toetsen.pop();
+               document.write(toetsen.toString() + "<br>");
+
+               // Met shift kun je aan het begin van een array het element verwijderen. 
+               alert("Met de functie shift wordt het eerste element verwijdert van een array in dit geval: " + toetsen.shift())
+
+               // Met unshift kun je aan het begin van een array het element toevoegen.
+               alert(toetsen.unshift("Dit is een begin"));
+               document.write(toetsen.toString() + "<br>");
+
+               // Met splice kunnen we midden in een array elementen verwijderen of toevoegen
+               toetsen.splice(5, 3, "Toets500", 8.4, "20-08-3024");
+               document.write(toetsen.toString() + "<br>");
+
+
+               var fruitAndVeggie = ["banaan", "kiwi", "appel", "komkommer", "sla", "bloemkool", ""];
+
+               var fruit = fruitAndVeggie.slice(0, 3);
+
+               document.write("Dit is mijn fruit-array:" + fruit.toString() + "<br>");
+
+               var veggie = fruitAndVeggie.slice(3,6);
+
+               document.write("Dit is mijn groente-array: " + veggie.toString() + "<br>");
+
+               // Gebruik sort() en reverse()
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+            </script> 
+        <a href="index.html">Ga terug naar index</a>
+        </body>
+</html>
