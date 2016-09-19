@@ -53,17 +53,31 @@
                document.write(toetsen.toString() + "<br>");
 
 
-               var fruitAndVeggie = ["banaan", "kiwi", "appel", "komkommer", "sla", "bloemkool", ""];
+               var fruitAndVeggie = ["banaan", "kiwi", "appel", "komkommer", "sla", "bloemkool", "broccoli"];
 
                var fruit = fruitAndVeggie.slice(0, 3);
 
                document.write("Dit is mijn fruit-array:" + fruit.toString() + "<br>");
 
-               var veggie = fruitAndVeggie.slice(3,6);
+               var veggie = fruitAndVeggie.slice(3,7);
 
-               document.write("Dit is mijn groente-array: " + veggie.toString() + "<br>");
+               document.write("Dit is mijn groente-array: " + veggie.toString() + "<br><hr>");
 
                // Gebruik sort() en reverse()
+               document.write("<h3>Sort() en reverse() functies met array's</h3>");
+
+               document.write("Het ongesorteerde array is: " + fruit.toString() + "<br>");
+
+               fruit.sort()
+               
+               document.write("Het gesorteerde array is: " + fruit.toString() + "<br><hr>");
+
+               document.write("Het niet gereversde array is: " + fruit.toString() + "<br>");
+
+               fruit.reverse()
+               
+               document.write("Het gesorteerde array is: " + fruit.toString() + "<br><hr>");
+
 
 
 
