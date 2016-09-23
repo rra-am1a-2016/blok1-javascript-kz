@@ -9,34 +9,32 @@
     <!-- Zo commentarieer je uit met html -->
     <script>
          document.write("<hr><h3>Bewerkingen van getallen</h3>");
-        var bewerking = '*/+-';
+        var bewerking = '-';
         var getal1 = 20;
         var getal2 = 45;
         var result = 0;
 
-        if ( bewerking == '-')
+        switch(bewerking)
         {
-            result = getal1 - getal2;
-            document.write("Het verschil van " + getal1 + " - " + getal2 + " = " + result );
-        }
-        else if ( bewerking == '+')
-        {
-            result = getal1 + getal2;
-            document.write("Het som van " + getal1 + " + " + getal2 + " = " + result );
-        }
-        else if ( bewerking == '/')
-        {
-            result = getal1 / getal2;
-            document.write("Het quotient van " + getal1 + " / " + getal2 + " = " + result );
-        }
-        else if ( bewerking == '*')
-        {
-            result = getal1 * getal2;
-            document.write("Het product van " + getal1 + " * " + getal2 + " = " + result );
-        }
-        else
-        {
-            document.write("Er is geen bewerking <br>");
+            case '-':
+             result = getal1 - getal2;
+             document.write("Het verschil van " + getal1 + " - " + getal2 + " = " + result );
+             break;
+            case '+':
+             result = getal1 + getal2;
+             document.write("Het som van " + getal1 + " + " + getal2 + " = " + result );
+             break;
+            case '/':
+             result = getal1 / getal2;
+             document.write("Het quotient van " + getal1 + " / " + getal2 + " = " + result );
+             break;
+            case '*':
+             result = getal1 * getal2;
+             document.write("Het product van " + getal1 + " * " + getal2 + " = " + result );
+             break;
+            default:
+             document.write("Er is geen bewerking <br>");
+             break;
         }
 
         // voorbeeld kan de waarden 0, 1, 2 en 3 aannemen
@@ -75,7 +73,7 @@
                 document.write("<br>");
                 break;
             default:
-                document.write("Er is een niet geldige waarde voor voorbeeld gekozen. Probeer het opnieuw");
+                document.write("Er is een niet geldige waarde voor voorbeeld gekozen. Probeer het opnieuw<br>");
         }
 
 
