@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+
+    <h1>Javascript variabelen</h1>
+    <!-- Zo commentarieer je uit met html -->
+    <script>
+         document.write("<hr><h3>Bewerkingen van getallen</h3>");
+        var bewerking = '*/+-';
+        var getal1 = 20;
+        var getal2 = 45;
+        var result = 0;
+
+        if ( bewerking == '-')
+        {
+            result = getal1 - getal2;
+            document.write("Het verschil van " + getal1 + " - " + getal2 + " = " + result );
+        }
+        else if ( bewerking == '+')
+        {
+            result = getal1 + getal2;
+            document.write("Het som van " + getal1 + " + " + getal2 + " = " + result );
+        }
+        else if ( bewerking == '/')
+        {
+            result = getal1 / getal2;
+            document.write("Het quotient van " + getal1 + " / " + getal2 + " = " + result );
+        }
+        else if ( bewerking == '*')
+        {
+            result = getal1 * getal2;
+            document.write("Het product van " + getal1 + " * " + getal2 + " = " + result );
+        }
+        else
+        {
+            document.write("Er is geen bewerking <br>");
+        }
+
+        // voorbeeld kan de waarden 0, 1, 2 en 3 aannemen
+        var voorbeeld = 456;
+
+        switch (voorbeeld)
+        {
+            case 0:
+                document.write("=========================================");
+                document.write("De variabele voorbeeld heeft de waarde: 0");
+                document.write("=========================================");
+                document.write("<br>");
+                break;
+            case 1:
+                document.write("=========================================");
+                document.write("De variabele voorbeeld heeft de waarde: 1");
+                document.write("=========================================");
+                document.write("<br>");
+                break;
+            case 2:
+                document.write("=========================================");
+                document.write("De variabele voorbeeld heeft de waarde: 2");
+                document.write("=========================================");
+                document.write("<br>");
+                break;
+            case 3:
+                document.write("=========================================");
+                document.write("De variabele voorbeeld heeft de waarde: 3");
+                document.write("=========================================");
+                document.write("<br>");
+                break;
+            case "test":
+                document.write("=========================================");
+                document.write("De variabele voorbeeld heeft de waarde: test");
+                document.write("=========================================");
+                document.write("<br>");
+                break;
+            default:
+                document.write("Er is een niet geldige waarde voor voorbeeld gekozen. Probeer het opnieuw");
+        }
+
+
+
+    </script>
+    <a href="index.html">Ga terug naar index</a>
+    </body>
+</html>
