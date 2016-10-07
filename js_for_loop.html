@@ -1,0 +1,89 @@
+<script>
+    document.write("Dit is nummer: 1<br>");
+    document.write("Dit is nummer: 2<br>");
+    document.write("Dit is nummer: 3<br>");
+    document.write("Dit is nummer: 4<br>");
+    document.write("Dit is nummer: 5<br>");
+    document.write("Dit is nummer: 6<br>");
+    document.write("Dit is nummer: 7<br>");
+
+
+    for (var i = 1; i < 10  ; i = i + 1)
+    {
+        document.write("Dit getal is gemaakt met een for-loop: " + i + "<br>");
+    }
+
+
+    for (var i = 10; i > 0  ; i = i - 1)
+    {
+        document.write("Dit getal is gemaakt met een for-loop die afloopt: " + i + "<br>");
+    }
+
+    for (var i = 1; i <= 10  ; i = i + 1)
+    {
+        document.write(i + " x 7 = " + i * 7 + "<br>");
+    }
+
+
+    for ( var j = 6;  j >= 1;  j = j - 1 )
+    {
+        document.write("<h" + j + ">Dit is tekst</h" + j + ">");
+    }
+
+
+    var red = 0, blue = 0, green = 0;
+
+    for ( var k = 0; k <= 255; k = k + 5)
+    {  
+        
+        if (red < 255)
+        {
+            red += 30;
+        }
+        else
+        {
+            red = 0;
+        }
+        if (blue < 255)
+        {
+            blue += 12;
+        }
+        else
+        {
+            blue = 0;
+        }
+        if (green < 255)
+        {
+            green += 1;
+        }
+        else
+        {
+            green = 0;
+        }
+
+        console.log("rgb(" + red + ", " + green +  ", " + blue + ")");
+        document.write("<div style='background-color: rgb(" + red + ", " + green +  ", " + blue + "); width: " + k + "px; height: 20px'>Dit is een doos</div>");
+    }
+
+    var daysOfWeek;
+
+    daysOfWeek = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
+
+    document.write("De dagen van de week zijn: ");
+    for (var i = 0; i < daysOfWeek.length; i++)
+    {
+        document.write(daysOfWeek[i] + " ");
+    }
+
+    document.write("<table style='border: 2px solid grey;'>");
+    for (var i = daysOfWeek.length - 1; i >= 0 ; i--)
+    {
+        document.write("<tr><td>" + i + "</td><td>" + daysOfWeek[i] + "</td></tr>");
+    }
+    
+    document.write("</table>"); 
+
+</script>
+
+
+
