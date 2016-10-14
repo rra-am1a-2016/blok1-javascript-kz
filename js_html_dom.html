@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML DOM</title>           
+    </head>
+    <body>
+       <h3>HTML DOM</h3>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <button onclick="findPTag()">
+           Klik op mij!
+        </button>
+
+        <script>
+         var teller = 0;
+         var ptag = document.getElementsByTagName("p");
+         document.write("De lengte van het array is: " + ptag.length);
+         function findPTag()   
+         {
+            var ptag = document.getElementsByTagName("p");
+         
+            /*
+            for ( var i = 0; i < ptag.length; i++)
+            {
+               ptag[i].innerHTML = "Dit is p-tag nummer: ";
+            }
+            */
+            ptag[teller].innerHTML = "Dit is p-tag nummer: " + teller;
+            if ( teller < ptag.length - 1 )
+            {
+               teller++;
+            }
+
+         }
+
+        </script>
+    </body>
+</html>
+
