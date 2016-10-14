@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>While Loop</title>
+      <style>
+         *
+         {
+            font-family: Verdana, Arial;
+         }
+
+      </style>
+   </head>
+   <body>
+      <h2>Javascript While Loop</h2>
+      <script>
+         var fruit = ["appel", "sinaasappel", "kiwi", "aardbei", "banaan"];
+         var i = 50;
+         var rand = 0;
+         var appel = 0, ;
+         while ( i > 0 )
+         {
+            i = i - 1;
+            rand = Math.floor(Math.random() * 5);
+            /*
+            var modulo = i%7;
+            document.write("Auto" + i + ": " + auto[modulo]+ "<br>");
+            */
+            if ( (fruit[rand] == "kiwi") ) //|| (fruit[rand]  == "aardbei"))
+            {
+               //break;
+               continue;
+            }
+
+            if ( fruit[rand] == "appel" )
+            {
+               appel += 1;
+            }
+            else if ()
+            document.write("Fruit" + i + ": " + fruit[rand] + "<br>");           
+         }
+         document.write("<br>Het aantal afgebeelde appels is: " + appel);
+      </script>
+   </body>
+</html>
