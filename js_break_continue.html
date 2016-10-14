@@ -16,7 +16,7 @@
          var fruit = ["appel", "sinaasappel", "kiwi", "aardbei", "banaan"];
          var i = 50;
          var rand = 0;
-         var appel = 0, ;
+         var appel = 0, kiwi = 0;
          while ( i > 0 )
          {
             i = i - 1;
@@ -25,7 +25,7 @@
             var modulo = i%7;
             document.write("Auto" + i + ": " + auto[modulo]+ "<br>");
             */
-            if ( (fruit[rand] == "kiwi") ) //|| (fruit[rand]  == "aardbei"))
+            if ( (fruit[rand] == "aardbei") ) //|| (fruit[rand]  == "aardbei"))
             {
                //break;
                continue;
@@ -35,10 +35,14 @@
             {
                appel += 1;
             }
-            else if ()
+            else if ( fruit[rand] == "kiwi")
+            {
+               kiwi += 1;
+            }
             document.write("Fruit" + i + ": " + fruit[rand] + "<br>");           
          }
          document.write("<br>Het aantal afgebeelde appels is: " + appel);
+         document.write("<br>Het aantal afgebeelde kiwi's is: " + kiwi);
       </script>
    </body>
 </html>
