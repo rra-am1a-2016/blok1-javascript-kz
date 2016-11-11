@@ -19,23 +19,17 @@
          function findPTag()   
          {
             var ptag = document.getElementsByTagName("p");
-
+            
+            alert(ptag[0].innerHTML);
             
             
-            /*
             for ( var i = 0; i < ptag.length; i++)
             {
-               ptag[i].innerHTML = "Dit is p-tag nummer: ";
+               if ( i == 3)
+               continue;
+               ptag[i].innerHTML = "Dit is p-tag nummer: " + i;
             }
-            
-            ptag[teller].innerHTML = "Dit is p-tag nummer: " + teller;
-            if ( teller < ptag.length - 1 )
-            {
-               teller++;
-            }
-            */
-         }
-
+         }         
         </script>
     </body>
 </html>

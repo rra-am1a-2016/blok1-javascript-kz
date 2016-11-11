@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>getElementsByClassName</title>
+        
+        <!-- Dit is een internal style -->
+        <style>
+            /* Dit is een comment */
+            table
+            {
+                border: 2px solid green;
+                background-color: rgb(0, 255, 0);
+                border-collapse: collapse;
+                color: blue;
+            }
+
+            td, th
+            {
+                border: 2px solid green;
+                padding: 5px;
+            }
+
+            th
+            {
+                background-color: black;
+                color: white;
+            }
+        </style>                
+    </head>
+    <body> 
+        <h3>getElementsByClassName</h3>
+
+        <!-- Maak een tabel met 5 records en twee kolommen
+            in de eerste kolom staat een nummering, in de tweede
+            kolom een schoenmerk. Maak daarna een button-tag-->
+
+
+      <table>
+         <tr>
+            <th>nr:</th>
+            <th>shoes</th>
+         </tr>
+         <tr>
+            <td>1</td>
+            <td>Nike</td>
+         </tr>
+         <tr class='even'>
+            <td>2</td>
+            <td>adidas</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>Le Coq Sportif</td>
+         </tr>
+         <tr class='even'>
+            <td>4</td>
+            <td>Puma</td>
+         </tr>
+         <tr>
+            <td>5</td>
+            <td>Cruijff</td>
+         </tr>
+         <tr class='even'>
+            <td>6</td>
+            <td>Lacoste</td>
+         </tr>
+         <tr>
+            <td>7</td>
+            <td>xyxyx</td>
+         </tr>
+         <tr class='even'>
+            <td>8</td>
+            <td>Timberland</td>
+         </tr>
+         <tr>
+            <td>9</td>
+            <td>Lotto</td>
+         </tr>
+         <tr class='even'>
+            <td>10</td>
+            <td>weelies</td>
+         </tr>
+      </table> 
+      <br>
+      <button onclick='makeEvenWhite();'>Make even White!</button>      
+    </body>
+</html>
+
+<script>
+   function makeEvenWhite()
+   {
+      var trElemEvenArray = document.getElementsByClassName("even");
+      //console.debug(trElemEvenArray);
+
+      for (var i = 0; i < trElemEvenArray.length; i++)
+      {
+         trElemEvenArray[i].style.fontSize = "2em";
+      }
+   }
+
+</script>
+
