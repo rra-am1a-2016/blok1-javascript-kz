@@ -40,7 +40,7 @@
             <th>nr:</th>
             <th>shoes</th>
          </tr>
-         <tr>
+         <tr class="odd">
             <td>1</td>
             <td>Nike</td>
          </tr>
@@ -48,7 +48,7 @@
             <td>2</td>
             <td>adidas</td>
          </tr>
-         <tr>
+         <tr class="odd">
             <td>3</td>
             <td>Le Coq Sportif</td>
          </tr>
@@ -56,7 +56,7 @@
             <td>4</td>
             <td>Puma</td>
          </tr>
-         <tr>
+         <tr class="odd">
             <td>5</td>
             <td>Cruijff</td>
          </tr>
@@ -64,7 +64,7 @@
             <td>6</td>
             <td>Lacoste</td>
          </tr>
-         <tr>
+         <tr class="odd">
             <td>7</td>
             <td>xyxyx</td>
          </tr>
@@ -72,7 +72,7 @@
             <td>8</td>
             <td>Timberland</td>
          </tr>
-         <tr>
+         <tr class="odd">
             <td>9</td>
             <td>Lotto</td>
          </tr>
@@ -83,6 +83,7 @@
       </table> 
       <br>
       <button onclick='makeEvenWhite();'>Make even White!</button>      
+      <button onclick='makeOddGrey();'>Make odd Grey!</button>      
     </body>
 </html>
 
@@ -92,9 +93,28 @@
       var trElemEvenArray = document.getElementsByClassName("even");
       //console.debug(trElemEvenArray);
 
+      var size = 1;
+
       for (var i = 0; i < trElemEvenArray.length; i++)
       {
-         trElemEvenArray[i].style.fontSize = "2em";
+         trElemEvenArray[i].style.fontSize = size + "em";
+         trElemEvenArray[i].style.backgroundColor = "White";
+         size = size + 1;
+      }
+   }
+
+   function makeOddGrey()
+   {
+      var trElemOddArray = document.getElementsByClassName("odd");
+      //console.debug(trElemOddArray);
+
+      var size = 0.5;
+
+      for (var i = 0; i < trElemOddArray.length; i++)
+      {
+         trElemOddArray[i].style.fontSize = size + "em";
+         trElemOddArray[i].style.backgroundColor = "Grey";
+         size = size + 0.5;
       }
    }
 
