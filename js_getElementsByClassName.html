@@ -83,7 +83,9 @@
       </table> 
       <br>
       <button onclick='makeEvenWhite();'>Make even White!</button>      
-      <button onclick='makeOddGrey();'>Make odd Grey!</button>      
+      <button onclick='makeOddGrey();'>Make odd Grey!</button>
+      <button onclick='makeTableRed();'>Make background Table Red</button>      
+      <button onclick='makeBorderBig();'>Make border big</button>      
     </body>
 </html>
 
@@ -115,6 +117,35 @@
          trElemOddArray[i].style.fontSize = size + "em";
          trElemOddArray[i].style.backgroundColor = "Grey";
          size = size + 0.5;
+      }
+   }
+
+   function makeTableRed()
+   {
+      var tableRed = document.querySelectorAll("table");
+      //console.debug(tableRed);
+
+      tableRed[0].style.backgroundColor = "Red";
+   }
+
+   function makeBorderBig()
+   {
+      var tdBorder = document.querySelectorAll("td");
+
+      console.debug(tdBorder);
+
+      for ( var i = 0; i < tdBorder.length; i++ )
+      {
+         tdBorder[i].style.border = "8px solid pink";
+      }
+
+      var thBorder = document.querySelectorAll("th");
+
+      console.debug(tdBorder);
+
+      for ( var i = 0; i < tdBorder.length; i++ )
+      {
+         tdBorder[i].style.border = "8px solid pink";
       }
    }
 
