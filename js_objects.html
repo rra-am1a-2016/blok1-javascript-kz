@@ -20,10 +20,86 @@
    var autokenmerken = { 
       type: "Fiat",
       model: 500,
-      color: "white"
+      color: "white",
+      showInfo: function() {
+            var output  = "Het type is: " + this.type + "<br>";
+                output += "Het model is: " + this.model + "<br>";
+                output += "De kleur is: " + this.color + "<br>";
+
+            return output;            
+      }
    };
 
-   document.write("Het type is: " + autokenmerken["type"]);
+   document.write(autokenmerken.showInfo());
+
+   var persoon = {
+      firstname : "Arjan",
+      infix :     "de",
+      lastname :  "Ruijter",
+      age :       48,
+      weight :    340,
+      haircolor : "Grey",
+      showMeasures : function(){
+         var output = "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>";
+             output += "Mijn naam is " + this.firstname + " " + this.infix + " " + this.lastname + "<br>";
+             output += "Mijn leeftijd is: " + this.age + "<br>";
+             output += "Mijn gewicht is: " + this.weight + " kg<br>";
+             output += "Mijn haarkleur is: " + this.haircolor + "<br>";
+             output += "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+         return output;
+      }
+   };
+
+   document.write(persoon.showMeasures());
+
+   var persoon2 = new Object();
+   persoon2.firstname = "Harry";
+   persoon2.infix =     "van";
+   persoon2.lastname =  "Amersfoort";
+   persoon2.age =  48;
+   persoon2.weight = 340;
+   persoon2.haircolor = "Grey";
+   persoon2.showMeasures = function(name, age){
+      if (age !== undefined)
+      {
+         this.age = age;
+      }
+      var output = "+++++++++++++++++++++++++++++++++++++++++++++++<br>";
+         output += "Hallo " + name + "<br>";
+         output += "Mijn naam is " + this.firstname + " " + this.infix + " " + this.lastname + "<br>";
+         output += "Mijn leeftijd is: " + this.age + "<br>";
+         output += "Mijn gewicht is: " + this.weight + " kg<br>";
+         output += "Mijn haarkleur is: " + this.haircolor + "<br>";
+         output += "+++++++++++++++++++++++++++++++++++++++++++++++";
+      return output;
+   }
+
+   document.write(persoon2.showMeasures("Fred"));
+
+   function optellen(getal1, getal2, name){
+      this.getal1 = getal1;
+      this.getal2 = getal2;
+      this.name = name;
+      this.som = function(){
+         var som = this.getal1 + this.getal2;
+         return som;
+      }
+   }
+
+   optellen.prototype.minus = function()
+   {
+      var min = this.getal1 - this.getal2;
+      return min;
+   }
+
+   
+
+   var sommetje = new optellen(3, 5);
+
+   sommetje.name = "Arjan";
+
+   alert(sommetje.som());
+   alert(sommetje.minus() + "Dit is mijn naam" + sommetje.name);
 
 
 
