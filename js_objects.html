@@ -74,9 +74,10 @@
       return output;
    }
 
-   document.write(persoon2.showMeasures("Fred"));
+   document.write(persoon2.showMeasures("Fred", 12));
 
-   function optellen(getal1, getal2, name){
+   function optellen(getal1, getal2, name)
+   {
       this.getal1 = getal1;
       this.getal2 = getal2;
       this.name = name;
@@ -100,6 +101,8 @@
 
    alert(sommetje.som());
    alert(sommetje.minus() + "Dit is mijn naam" + sommetje.name);
+
+   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
