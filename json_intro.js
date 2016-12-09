@@ -6,7 +6,10 @@ var jsonString = '{"firstname": "Arjan", ' +
                   '"shoesize": 10, ' + 
                   '"rich": false, ' +          //boolean
                   '"favoriteColor": ["geel", "blauw", "rood"], ' + //array
-                  '"auto": {"merk": "Mercedes", "kenteken": "51-HB-ZP"}}'; //object
+                  '"auto": {"merk": "Mercedes", "kenteken": "51-HB-ZP"}, ' + 
+                  '"family": [{"name": "Hennie", "age": 67}, ' + 
+                  '           {"name": "Bert", "age": 34}, ' + 
+                  '           {"name": "Frans", "age": 23}]}'; //object
 
 // Zet deze JSON string om naar een Javascript object
 var objFromJsonString = JSON.parse(jsonString);
@@ -22,7 +25,9 @@ document.getElementById("p_tag").innerHTML =
                  + "Mijn schoenmaat is " + objFromJsonString.shoesize + "<br>"
                  + "Mijn favoriet kleur is " + objFromJsonString.favoriteColor[0] + "<br>"
                  + "Mijn automerk is " + objFromJsonString.auto.merk + "<br>"
-                 + "Mijn kenteken is " + objFromJsonString.auto.kenteken + "<br>";
+                 + "Mijn kenteken is " + objFromJsonString.auto.kenteken + "<br>"
+                 + "Mijn broer heet: " + objFromJsonString.family[1].name + "<br>"
+                 + "De leeftijd van mijn broer is: " + objFromJsonString.family[1].age;
                  
 
 // Maak een array die drie objecten bevat. 
