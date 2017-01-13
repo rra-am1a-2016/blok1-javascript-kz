@@ -19,6 +19,7 @@ xmlhttp.onreadystatechange = function()
    {
       //alert(xmlhttp.responseText);
       var jsonObj = JSON.parse(this.responseText);
+      //console.debug(jsonObj);
       document.getElementById("ajaxTekst").innerHTML = "Mijn naam is: " + jsonObj.firstname + 
                                                        "<br>Mijn leeftijd is: " + jsonObj.age + 
                                                        "<br>Mijn id is: " + jsonObj.id + "<br>";
